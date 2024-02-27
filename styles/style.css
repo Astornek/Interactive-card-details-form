@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 1.0625rem;
+
   font-family: "Space Grotesk", sans-serif;
 }
 :root {
@@ -28,4 +28,90 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   width: 100%;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  font-size: 1.0625rem;
+}
+main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  right: 10%;
+}
+.card-section {
+  max-width: 30rem;
+  width: 100%;
+}
+.card-front {
+  background-image: url(../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 100%;
+  font-weight: 800;
+  color: var(--White);
+  border-radius: 10px;
+}
+.white-big-dot {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+.dots-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.white-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.card-number {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.bot-inf {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.card-back {
+  background-image: url(../images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 100%;
+  color: var(--White);
+  border-radius: 10px;
+  height: 15rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+.cvc-code {
+  position: absolute;
+  top: 45%;
+  right: 13%;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.input-section {
+  width: 100%;
+  max-width: 35rem;
+}
+.thank-you-section {
+  display: none;
 }
