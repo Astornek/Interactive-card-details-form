@@ -110,8 +110,103 @@ main {
 }
 .input-section {
   width: 100%;
-  max-width: 35rem;
+  max-width: 25rem;
+}
+.input-name,
+.card-number-input {
+  max-width: 23rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid var(--Light-grayish-violet);
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--Very-dark-violet);
+}
+.cardholder,
+.card,
+.date-exp,
+.cvc {
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.input-name:focus,
+.card-number-input:focus,
+.exp-m:focus,
+.exp-y:focus,
+.cvc-input:focus {
+  outline: 1px solid var(--Very-dark-violet);
+}
+.exp-m,
+.exp-y {
+  max-width: 5rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid var(--Light-grayish-violet);
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--Very-dark-violet);
+}
+.cvc-input {
+  max-width: 10rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid var(--Light-grayish-violet);
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--Very-dark-violet);
+}
+.input-bot {
+  display: flex;
+  gap: 1rem;
+  max-width: 25rem;
+}
+.name-error,
+.card-error,
+.date-error,
+.cvc-error {
+  color: var(--Red);
+  font-size: 0.9rem;
+  display: none;
+}
+.name-error.active,
+.card-error.active,
+.date-error.active,
+.cvc-error.active {
+  display: flex;
+}
+.confirm-btn {
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-weight: 800;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 23rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.confirm-btn:hover {
+  box-shadow: 0 0 15px var(--Very-dark-violet);
 }
 .thank-you-section {
   display: none;
+}
+@media (max-width: 1390px) {
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 4rem;
+  }
+  body {
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: flex-start;
+  }
 }
