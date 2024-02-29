@@ -96,14 +96,14 @@ main {
   width: 100%;
   color: var(--White);
   border-radius: 10px;
-  height: 15rem;
+  height: 14rem;
   position: relative;
   margin-top: 2rem;
   margin-left: 5rem;
 }
 .cvc-code {
   position: absolute;
-  top: 45%;
+  top: 49%;
   right: 13%;
   font-weight: 800;
   font-size: 1.2rem;
@@ -171,6 +171,8 @@ main {
   color: var(--Red);
   font-size: 0.9rem;
   display: none;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 .name-error.active,
 .card-error.active,
@@ -197,7 +199,39 @@ main {
 .thank-you-section {
   display: none;
 }
-@media (max-width: 1390px) {
+.continue-btn {
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-weight: 800;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 23rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.thank-you-section h2 {
+  letter-spacing: 0.4rem;
+  color: var(--Very-dark-violet);
+  margin: 1rem 0;
+}
+.msg {
+  color: var(--Dark-grayish-violet);
+  margin-bottom: 2rem;
+}
+.thank-you-section.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-section.off,
+.card-section.off {
+  display: none;
+}
+@media (max-width: 800px) {
   main {
     flex-direction: column;
     justify-content: flex-start;
@@ -208,5 +242,49 @@ main {
     background-repeat: no-repeat;
     background-size: 100%;
     justify-content: flex-start;
+  }
+  .card-section {
+    position: relative;
+  }
+  .card-front {
+    order: 2;
+    position: absolute;
+    max-width: 20rem;
+    z-index: 2;
+    top: 5rem;
+    left: 1rem;
+  }
+  .card-back {
+    order: 1;
+    margin: 0;
+    top: -3rem;
+    right: 0.5rem;
+    height: 12rem;
+    position: absolute;
+    max-width: 20rem;
+  }
+  .input-section,
+  .thank-you-section.active {
+    margin: 15rem auto;
+    max-width: 20rem;
+  }
+  .cardholder,
+  .card,
+  .date-exp,
+  .cvc {
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .cvc-code {
+    right: 1rem;
+    top: 5.1rem;
+  }
+  .input-bot {
+    max-width: 20rem;
+  }
+  .cvc-input {
+    max-width: 8rem;
   }
 }
